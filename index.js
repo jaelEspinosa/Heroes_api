@@ -29,9 +29,9 @@ const corsOptions= {
             
             callback(null, true)
         }else{
-            callback(null, true) // borrar esta linea y aplicar la de abajo (34) para produccion
+            callback(new Error('No permitido por CORS'))
+           // callback(null, true) // borrar esta linea y aplicar la de abajo (34) para produccion
           
-            /* callback(new Error('No permitido por CORS')) */
         }
     }
 }
