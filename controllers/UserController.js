@@ -51,7 +51,7 @@ const register = async ( req, res )=>{
 const perfil = async ( req, res )=>{
 
     try {    
-      return res.status(200).json( {perfil: req.user })
+      return res.status(200).json( req.user )
     } catch (error) {
       console.log(error) 
       return res.status(500).json({msg: error.message})
